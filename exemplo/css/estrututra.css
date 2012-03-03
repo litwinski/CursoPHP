@@ -1,0 +1,43 @@
+div {
+    _border: 2px solid black;
+    _margin: 5px;
+}
+
+#titulo {
+    float: left;
+    width: 70%;
+    background-color: gray;
+}
+
+#pesquisa {
+    float: right;
+    width: 25%;
+    background-color: red;
+}
+
+#menu, #conteudo {
+    clear: both;
+}
+
+.esquerda {
+    float: right;
+    width: 10%;
+}
+
+.centro {
+    float: left;
+    width: 85%;
+}
+
+#menu li {
+    display: inline;
+    margin: 20px;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li:hover {
+    background-color: gray;
+}
