@@ -2,6 +2,13 @@ html {
     font-size: 50px;
 }
 
+body {
+    background-image: url('/images/html.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
 div {
     font-size: 0.75em;
     border: 5px dotted blue;
@@ -35,4 +42,25 @@ table {
 
 .primeiro {
     text-align: justify;
+}
+
+input[type="text"]:focus {
+    border-width: 2px;
+    font-weight: bold;
+}
+
+div:hover, input[type="text"]:hover {
+    background-color: blue;
+    border-color: red;
+    color: white;
+    cursor: progress;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+    margin-right: 200px;
+}
+
+a:visited {
+    color: black;
 }
