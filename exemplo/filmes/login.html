@@ -33,28 +33,24 @@
             <div id="pesquisa">
                 <form action="#" method="post">
                     <label for="busca">Pesquisar:</label>
-                    <input type="text" name="pesquisa" id="busca" onmouseover="document.getElementById('dica').style.display = 'inline';" onmouseout="document.getElementById('dica').style.display = 'none';">
+                    <input type="text" name="pesquisa" id="busca">
                     <input type="submit" value="OK">
                 </form>
-            </div>
-            <div id="dica">
-                Caixa de Pesquisa
             </div>
             
             <br style="clear: both;">
             
-            <div id="filmes">
-                <div class="filme">
-                    <div class="poster"><img src="img/poster.jpg"></div>
-                    <div class="resumo">
-                        <div class="titulo_filme">Filme 1</div>
-                        <div class="genero">Genero: Ação</div>
-                        <div class="titulo_original">Titulo Original: Filme 1</div>
-                        <div class="sinopse">Sinopse</div>
-                    </div>
-                    <br style="clear: both;">
-                </div>
-            </div>
+            <form action="form.php?id=1" method="post">
+                <label for="login">Usuário</label>
+                <input type="text" id="login" name="login">
+                <br>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha">
+                <br>
+                    <label>&nbsp;</label>
+                <input type="submit" value="Enviar">
+            </form>
+            
         </div>
     </body>
 </html>
