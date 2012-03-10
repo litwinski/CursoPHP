@@ -97,7 +97,7 @@ body {
 
 .resumo {
     float: left;
-    width: 400px;
+    width: 470px;
 }
 
 label {
@@ -114,4 +114,17 @@ label {
     position: absolute;
         right: 100px;
     padding: 1em;
+}
+
+.filme {
+    font-size: 16px;
+}
+
+.titulo_filme {
+    font-size: 1.8em;
+}
+
+.sinopse {
+    margin-top: 20px;
+    font-size: 0.8em;
 }
