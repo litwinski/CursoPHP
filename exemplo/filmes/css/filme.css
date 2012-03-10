@@ -84,6 +84,8 @@ body {
 }
 
 .poster img {
+    max-width: 200px;
+    max-height: 400px;
     border-radius: 20px;
         -moz-border-radius: 20px;
 }
@@ -95,6 +97,7 @@ body {
 
 .resumo {
     float: left;
+    width: 400px;
 }
 
 label {

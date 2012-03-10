@@ -1,3 +1,4 @@
+<?php include 'lista_filmes.php'; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,16 +45,20 @@
             <br style="clear: both;">
             
             <div id="filmes">
+                <?php for ($i = 0; $i < count($filmes); $i++) : ?>
                 <div class="filme">
-                    <div class="poster"><img src="img/poster.jpg"></div>
+                    <div class="poster">
+                        <img src="img/<?php echo $filmes[$i]['poster'] ?>">
+                    </div>
                     <div class="resumo">
-                        <div class="titulo_filme">Filme 1</div>
-                        <div class="genero">Genero: Ação</div>
-                        <div class="titulo_original">Titulo Original: Filme 1</div>
-                        <div class="sinopse">Sinopse</div>
+                        <div class="titulo_filme"><?php echo $filmes[$i]['titulo'] ?></div>
+                        <div class="genero">Genero: <?php echo $filmes[$i]['genero'] ?></div>
+                        <div class="titulo_original">Titulo Original: <?php echo $filmes[$i]['titulo_original'] ?></div>
+                        <div class="sinopse"><?php echo $filmes[$i]['sinopse'] ?></div>
                     </div>
                     <br style="clear: both;">
                 </div>
+                <?php endfor; ?>
             </div>
         </div>
     </body>
