@@ -15,7 +15,7 @@
             <div id="menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li>Cadastro</li>
+                    <li><a href="#">Cadastro</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
             </div>
@@ -59,6 +59,7 @@
                     <br style="clear: both;">
                 </div>
                 <?php endfor; ?>
+                <br style="clear: both;">
             </div>
         </div>
     </body>

@@ -1,0 +1,172 @@
+body {
+    background-color: white;
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    min-width: 800px;
+    position: relative;
+    width: 80%;
+}
+
+#conteudo {
+    background-color: #b2ffb2;
+    padding: 10px 30px 10px 30px;
+}
+
+#logo h1 {
+    color: #1d541d;
+    font-family: sans-serif;
+    font-size: 4em;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    text-shadow: 4px 4px 8px #080808;
+}
+
+#logo, #menu {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+        top: -60px;
+    text-align: center;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu li {
+    display: inline;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+#menu li a {
+    background-color: #1d541d;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    background-color: green;
+}
+
+#chamada {
+    color: #1d541d;
+    font-family: sans-serif;
+    font-size: 0.7em;
+    font-weight: bold;
+    line-height: 20px;
+    position: relative;
+        top: -190px;
+    text-align: center;
+}
+
+#titulo {
+    color: #1d541d;
+    float: left;
+    font-family: Sans-serif;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px #080808;
+    position: relative;
+    top: -80px;
+}
+
+#pesquisa {
+    color: #1d541d;
+    float: right;
+    font-size: 0.7em;
+    position: absolute;
+        top: 10px;
+        right: 10px;
+}
+
+#pesquisa input[type="text"] {
+    border: 2px solid #1d541d;
+    border-radius: 4px;
+}
+
+#pesquisa input[type="submit"] {
+    background-color: #1d541d;
+    border: 0;
+    border-radius: 5px;
+        -moz-border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 4px 10px;
+}
+
+#filmes {
+    position: relative;
+    top: -80px;
+}
+
+.filme {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px dashed #1d541d;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    float: left;
+    margin: 20px;
+    height: 180px;
+    padding: 10px;
+    width: 450px;
+}
+
+.filme:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+div.filme:last-child {
+    clear: both;
+}
+
+.titulo_filme {
+    color: #1d541d;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px #080808;
+}
+
+.sinopse {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.poster img {
+    max-width: 100px;
+    max-height: 200px;
+}
+
+.poster {
+    float: left;
+    margin-right: 20px; 
+}
+
+.resumo {
+    float: left;
+    max-width: 300px;
+}
+
+label {
+    _float: left;
+    margin-right: 5px;
+    text-align: right;
+    width: 120px;
+}
+
+#dica {
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+        top: 40px;
+        right: 50px;
+    padding: 1em;
+}
