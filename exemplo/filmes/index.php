@@ -6,8 +6,25 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/filme.css">
         <link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script>
+            $(function () {
+                $('#css-toggle').click(function () {
+                    var link = $('link[rel="stylesheet"]');
+                    if (link.attr('href') == 'css/filme.css') {
+                        link.attr('href', 'css/filme2.css');
+                        $(this).text('css/filme2.css');
+                    } else {
+                        link.attr('href', 'css/filme.css');
+                        $(this).text('css/filme.css');
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
+        <!-- Botão de troca de CSS -->
+        <div id="css-toggle" style="z-index: 1000; cursor: pointer; float: left; background-color: white; border: 1px solid black;">css/filme.css</div>
         <div id="conteudo">
             <div id="logo">
                 <h1>filmes</h1>
