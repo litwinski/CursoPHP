@@ -62,20 +62,20 @@
             <br style="clear: both;">
             
             <div id="filmes">
-                <?php for ($i = 0; $i < count($filmes); $i++) : ?>
+                <?php foreach ($filmes as $filme) : ?>
                 <div class="filme">
                     <div class="poster">
-                        <img src="img/<?php echo $filmes[$i]['poster'] ?>">
+                        <img src="img/<?php echo $filme['poster'] ?>">
                     </div>
                     <div class="resumo">
-                        <div class="titulo_filme"><?php echo $filmes[$i]['titulo'] ?></div>
-                        <div class="genero">Genero: <?php echo $filmes[$i]['genero'] ?></div>
-                        <div class="titulo_original">Titulo Original: <?php echo $filmes[$i]['titulo_original'] ?></div>
-                        <div class="sinopse"><?php echo $filmes[$i]['sinopse'] ?></div>
+                        <div class="titulo_filme"><?php echo $filme['titulo'] ?></div>
+                        <div class="genero">Genero: <?php echo $filme['genero'] ?></div>
+                        <div class="titulo_original">Titulo Original: <?php echo $filme['titulo_original'] ?></div>
+                        <div class="sinopse"><?php echo $filme['sinopse'] ?></div>
                     </div>
                     <br style="clear: both;">
                 </div>
-                <?php endfor; ?>
+                <?php endforeach; ?>
                 <br style="clear: both;">
             </div>
         </div>
