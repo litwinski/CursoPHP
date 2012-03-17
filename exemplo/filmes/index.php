@@ -1,11 +1,14 @@
-<?php include 'lista_filmes.php'; ?>
+<?php 
+include 'lista_filmes.php';
+$filmes = getFilmes('A&ccedil;&atilde;o', true);
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Meus Filmes</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/filme2.css">
-        <link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>
+        <!--<link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>-->
         <script src="js/jquery-1.7.1.min.js"></script>
         <script>
             $(function () {
