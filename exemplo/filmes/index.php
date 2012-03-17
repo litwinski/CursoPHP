@@ -65,7 +65,7 @@ $filmes = getFilmes('A&ccedil;&atilde;o', true);
             <br style="clear: both;">
             
             <div id="filmes">
-                <?php foreach ($filmes as $filme) : ?>
+                <?php foreach (getFilmes() as $filme) : ?>
                 <div class="filme">
                     <div class="poster">
                         <img src="img/<?php echo $filme['poster'] ?>">

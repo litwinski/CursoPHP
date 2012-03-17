@@ -1,4 +1,8 @@
 <?php
+function getFilmesDeComedia($ordenado = false) {
+    return getFilmes('Com&eacute;dia', $ordenado);
+}
+
 function getFilmes($genero = null, $ordenado = false) {
     $filmes = array(
         array(
