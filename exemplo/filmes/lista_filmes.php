@@ -6,7 +6,16 @@ $filmes = array(
         'titulo' => 'Os Vingadores',
         'genero' => 'A&ccedil;&atilde;o',
         'titulo_original' => 'The Avengers',
-        'sinopse' => 'Homem de Ferro, Capit&atilde;o Am&aacute;rica, Thor, Hulk, etc.'
+        'sinopse' => 'Homem de Ferro, Capit&atilde;o Am&aacute;rica, Thor, Hulk, etc.',
+        'ano' => 2000
+    ),
+    array(
+        'poster' => 'avengers.jpg',
+        'titulo' => 'Os Vingadores',
+        'genero' => 'A&ccedil;&atilde;o',
+        'titulo_original' => 'The Avengers',
+        'sinopse' => '1999 - Homem de Ferro, Capit&atilde;o Am&aacute;rica, Thor, Hulk, etc.',
+        'ano' => 1999
     ),
     array(
         'poster' => 'batman.jpg',
@@ -35,9 +44,29 @@ $filmes = array(
         'genero' => 'A&ccedil;&atilde;o',
         'titulo_original' => 'Total Recall',
         'sinopse' => 'Refilmagem do clássico de 90'
+    ),
+    array(
+        'poster' => 'batman.jpg',
+        'titulo' => 'Cavaleiro das Trevas',
+        'genero' => 'A&ccedil;&atilde;o',
+        'titulo_original' => 'Dark Knight',
+        'sinopse' => 'Segundo filme do Batman!'
     )
 );
 //echo '<pre>';
 //var_dump($filmes);
 //echo '</pre>';
+
+
+function cmp($a, $b)
+{   
+    if ($a['titulo'] == $b['titulo']) {
+        if ($a['ano'] == $b['ano'])
+            return 0;
+        return ($a['ano'] < $b['ano']) ? -1 : 1;
+    }
+    return ($a['titulo'] < $b['titulo']) ? -1 : 1;
+}
+
+usort($filmes, 'cmp');
 ?>
