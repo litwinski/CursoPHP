@@ -7,7 +7,7 @@ $filmes = getFilmes('A&ccedil;&atilde;o', true);
     <head>
         <title>Meus Filmes</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/filme2.css">
+        <link rel="stylesheet" type="text/css" href="css/filme.css">
         <!--<link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>-->
         <script src="js/jquery-1.7.1.min.js"></script>
         <script>
@@ -34,7 +34,7 @@ $filmes = getFilmes('A&ccedil;&atilde;o', true);
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="#">Cadastro</a></li>
                     <li><a href="login.html">Login</a></li>
                 </ul>
