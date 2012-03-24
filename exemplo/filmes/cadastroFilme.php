@@ -44,7 +44,9 @@ if (!isset($_SESSION['filme'])) {
                 <div id="erro"><?php echo $_SESSION['erro_cadastro']?></div>
                 <?php unset($_SESSION['erro_cadastro']);?>
             <?php endif;?>
-            <form action="processa_cadastro.php" method="post">
+            <form action="processa_cadastro.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="filme[id]" value="<?php echo $filme['id']?>">
+                <input type="hidden" name="acao" value="salvar">
                 <label for="titulo">T&iacute;tulo</label>
                 <input type="text" id="titulo_filme" name="filme[titulo]" value="<?php echo $filme['titulo']?>">
                 <br>
@@ -61,7 +63,7 @@ if (!isset($_SESSION['filme'])) {
                 <textarea id="sinopse" name="filme[sinopse]" cols="40" rows="5"><?php echo $filme['sinopse']?></textarea>
                 <br>
                 <label for="poster">Poster</label>
-                <input type="text" id="poster" name="filme[poster]" value="<?php echo $filme['poster']?>">
+                <input type="file" id="poster" name="filme[poster]" value="<?php echo $filme['poster']?>">
                 <br>
                 <label>&nbsp;</label>
                 <input type="submit" value="Enviar">

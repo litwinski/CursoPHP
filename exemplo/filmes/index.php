@@ -13,7 +13,7 @@ $filmes = getFilmes($pesquisa);
 <html>
     <head>
         <title>Meus Filmes</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="css/filme.css">
         <!--<link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>-->
         <script src="js/jquery-1.7.1.min.js"></script>
@@ -67,6 +67,10 @@ $filmes = getFilmes($pesquisa);
                         <div class="genero">Genero: <?php echo $filme['genero'] ?></div>
                         <div class="titulo_original">Titulo Original: <?php echo $filme['titulo_original'] ?></div>
                         <div class="sinopse"><?php echo $filme['sinopse'] ?></div>
+                    </div>
+                    <div class="acoes">
+                        <a href="processa_cadastro.php?acao=atualizar&id=<?php echo $filme['id']?>"><img src="img/edit-icon.png"></a>
+                        <a href="processa_cadastro.php?acao=excluir&id=<?php echo $filme['id']?>"><img src="img/delete-icon.png"></a>
                     </div>
                     <br style="clear: both;">
                 </div>
