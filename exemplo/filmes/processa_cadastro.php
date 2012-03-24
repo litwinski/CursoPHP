@@ -44,29 +44,36 @@ switch ($acao) {
         */
         //$poster = $_FILES['poster']['name'];
         $poster = $_FILES['filme']['name']['poster'];
-        $filmeArray['poster'] = $poster;
-        $filme = new Filme($filmeArray);
+        if (!empty($poster)) {
+            $filmeArray['poster'] = $poster;
 
-        $temp_file = $_FILES['filme']['tmp_name']['poster'];
-        $file = __DIR__.'/img/'.$poster;
-        if (move_uploaded_file($temp_file, $file))
+            $temp_file = $_FILES['filme']['tmp_name']['poster'];
+            $file = __DIR__.'/img/'.$poster;
+            move_uploaded_file($temp_file, $file);
+        }
+        $filme = new Filme($filmeArray);
+        $id = $filme->getId();
+        if (empty($id))
             FilmeDAO::incluir($filme);
         else
-            die('Nao conseguiu salvar o poster');
+            FilmeDAO::alterar($filme);
 
         header('Location: index.php');
 
         break;
     case 'atualizar' :
         $id = $_GET['id'];
-        echo 'Implementar o atualizar '.$id;
+        $filme = FilmeDAO::selecionar($id);
+        $_SESSION['filme'] = $filme;
+        header('Location: cadastroFilme.php');
         break;
     case 'excluir' :
         $id = $_GET['id'];
-        echo 'Implementar o excluir '.$id;
+        FilmeDAO::excluir($id);
+        header('Location: index.php');
         break;
     default:
-        echo "Nenhum ação informada!";
+        echo "Nenhuma ação informada!";
         break;
 }
 ?>

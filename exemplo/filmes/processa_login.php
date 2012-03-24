@@ -1,5 +1,7 @@
 <?php
 include 'banco.php';
+include 'dao/UsuarioDAO.php';
+
 session_start();
 
 $login = $_POST['login'];
@@ -21,7 +23,7 @@ if (!empty($erros)) {
 
 $senha = md5($senha);
 
-$sql = 'select id, login 
+/*$sql = 'select id, login 
     from usuarios 
     where login = "'.$login.'" 
     and senha = "'.$senha.'"';
@@ -31,8 +33,14 @@ if (!$usuario = mysql_fetch_array($rs)) {
     $_SESSION['erro_login'] = 'Usuário e/ou senha inválidos';
     header('Location: login.php');
     die;
-}
+}*/
 
+$usuario = UsuarioDAO::selecionar($login, $senha);
+if (empty($usuario)) {
+    $_SESSION['erro_login'] = 'Usuário e/ou senha inválidos';
+    header('Location: login.php');
+    die;
+}
 
 $_SESSION['usuario'] = $usuario;
 header('Location: index.php');
