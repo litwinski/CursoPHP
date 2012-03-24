@@ -5,6 +5,21 @@ if (!isset($_SESSION['usuario'])) {
     header('Location: login.php');
     die;
 }
+
+if (!isset($_SESSION['filme'])) {
+    $filme = array(
+        'id' => '',
+        'titulo'=> '',
+        'titulo_original' => '',
+        'ano' => '',
+        'genero' => '',
+        'sinopse' => '',
+        'poster' => ''
+    );
+} else {
+    $filme = $_SESSION['filme'];
+    unset($_SESSION['filme']);
+}
 ?>
 
 
@@ -31,19 +46,22 @@ if (!isset($_SESSION['usuario'])) {
             <?php endif;?>
             <form action="processa_cadastro.php" method="post">
                 <label for="titulo">T&iacute;tulo</label>
-                <input type="text" id="titulo_filme" name="titulo">
+                <input type="text" id="titulo_filme" name="filme[titulo]" value="<?php echo $filme['titulo']?>">
                 <br>
                 <label for="titulo_original">T&iacute;tulo Original</label>
-                <input type="text" id="titulo_original" name="titulo_original">
+                <input type="text" id="titulo_original" name="filme[titulo_original]" value="<?php echo $filme['titulo_original']?>">
                 <br>
                 <label for="ano">Ano</label>
-                <input type="text" id="ano" name="ano">
+                <input type="text" id="ano" name="filme[ano]" value="<?php echo $filme['ano']?>">
                 <br>
                 <label for="genero">Genero</label>
-                <input type="text" id="genero" name="genero">
+                <input type="text" id="genero" name="filme[genero]" value="<?php echo $filme['genero']?>">
                 <br>
                 <label for="sinopse">Sinopse</label>
-                <textarea id="sinopse" name="sinopse" cols="40" rows="5"></textarea>
+                <textarea id="sinopse" name="filme[sinopse]" cols="40" rows="5"><?php echo $filme['sinopse']?></textarea>
+                <br>
+                <label for="poster">Poster</label>
+                <input type="text" id="poster" name="filme[poster]" value="<?php echo $filme['poster']?>">
                 <br>
                 <label>&nbsp;</label>
                 <input type="submit" value="Enviar">
