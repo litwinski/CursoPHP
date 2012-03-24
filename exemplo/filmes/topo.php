@@ -1,4 +1,3 @@
-<?php session_start() ?>
         <div id="logo">
                 <h1>filmes</h1>
             </div>
