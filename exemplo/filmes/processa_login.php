@@ -1,8 +1,24 @@
 <?php
 include 'banco.php';
+session_start();
 
 $login = $_POST['login'];
 $senha = $_POST['senha'];
+
+$erros = '';
+if (empty($login)) {
+    $erros = 'Informe o login.<br>';
+}
+if (empty($senha)) {
+    $erros .= 'Informe a senha.<br>';
+}
+
+if (!empty($erros)) {
+    $_SESSION['erro_login'] = $erros;
+    header('Location: login.php');
+    die;
+}
+
 $senha = md5($senha);
 
 $sql = 'select id, login 
@@ -12,10 +28,12 @@ $sql = 'select id, login
 $con = getConexao();
 $rs = executaConsulta($sql, $con);
 if (!$usuario = mysql_fetch_array($rs)) {
-    die ('Usuário e/ou senha inválidos');
+    $_SESSION['erro_login'] = 'Usuário e/ou senha inválidos';
+    header('Location: login.php');
+    die;
 }
 
-session_start();
+
 $_SESSION['usuario'] = $usuario;
 header('Location: index.php');
 ?>

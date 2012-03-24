@@ -16,6 +16,9 @@
             
             <br style="clear: both;">
             
+            <?php if (isset($_SESSION['erro_login'])):?>
+                <div id="erro"><?php echo $_SESSION['erro_login']?></div>
+            <?php endif;?>
             <form action="processa_login.php" method="post">
                 <label for="login">Usuário</label>
                 <input type="text" id="login" name="login">

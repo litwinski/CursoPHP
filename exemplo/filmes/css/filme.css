@@ -110,7 +110,7 @@ label {
     float: left;
     margin-right: 5px;
     text-align: right;
-    width: 120px;
+    width: 150px;
 }
 
 #dica {
@@ -133,4 +133,11 @@ label {
 .sinopse {
     margin-top: 20px;
     font-size: 0.8em;
+}
+
+#erro {
+    color: red;
+    background-color: #fde0df;
+    border: 2px solid red;
+    font-variant: small-caps;
 }

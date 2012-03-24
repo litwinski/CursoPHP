@@ -12,7 +12,7 @@ $filmes = getFilmes($pesquisa);
 <html>
     <head>
         <title>Meus Filmes</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <link rel="stylesheet" type="text/css" href="css/filme.css">
         <!--<link href='http://fonts.googleapis.com/css?family=Euphoria+Script' rel='stylesheet' type='text/css'>-->
         <script src="js/jquery-1.7.1.min.js"></script>
